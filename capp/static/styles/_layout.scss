@@ -1,0 +1,71 @@
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: transparent;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  gap: 35px;
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: #d4a373;
+}
+
+.logo span,
+a {
+  font-family: "Gabarito";
+  text-decoration: none;
+  color: black;
+}
+
+.logo span {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.logo,
+.contact {
+  width: 200px;
+}
+
+.contact {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact a {
+  background-color: rgb(16, 16, 16);
+  padding: 10px 25px;
+  color: white !important;
+  border-radius: 50px;
+  width: fit-content;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+.contact a:hover {
+  background-color: #d4a373;
+}

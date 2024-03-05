@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Gabarito";
+}
+.container {
+  padding-left: 5%;
+  padding-right: 5%;
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.hero {
+  padding-top: 100px;
+  min-height: 100vh;
+}
+
+.subtitle {
+  font-family: "Gabarito";
+  font-weight: 400;
+  background-color: #f9fee2;
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.068);
+  margin-bottom: 15px;
+  display: block;
+  width: fit-content;
+}
+
+/* FOOTER */
+
+#sub-footer {
+  background-color: rgb(27, 27, 27);
+}
+
+#sub-footer .container {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+#sub-footer p {
+  color: white;
+  font-size: 12px;
+}
+
+/* CURSOR */
+
+.cursor {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  border-radius: 50%;
+  background: #d9e99a;
+  pointer-events: none;
+  z-index: 111;
+  mix-blend-mode: difference;
+
+  transition: all 0.2s ease-out;
+  animation: moveCursor1 0.5s infinite alternate;
+
+  @media screen and (max-width: 867px) {
+    display: none;
+  }
+}
+
+.expand {
+  background: transparent;
+  animation: moveCursor2 0.5s forwards;
+  border: 1px solid #0000008a;
+}
+
+@keyframes moveCursor1 {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes moveCursor2 {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(2);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Gabarito";
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  font-family: "Lato";
+  line-height: 1.4rem;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 28px;
+}
