@@ -125,10 +125,19 @@ p {
   line-height: 1.4rem;
 }
 
+.hero-title {
+  font-size: 56px;
+  line-height: 1em;
+}
+
 h1 {
   font-size: 48px;
 }
 
 h2 {
   font-size: 28px;
+}
+
+.hero-section .container {
+  padding-top: 150px;
 }

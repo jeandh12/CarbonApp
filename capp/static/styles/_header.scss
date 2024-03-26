@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+.logo,
+.account-container {
+  width: 200px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  img {
+    width: 40px;
+  }
+}
+
+.separator {
+  background-color: black;
+  width: 1px;
+  height: 15px;
+}
+
+.login a {
+  background-color: #86d07d;
+  padding: 8px 20px;
+  border-radius: 50px;
+}

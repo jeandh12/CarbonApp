@@ -40,41 +40,42 @@
     {% endif %}
   </head>
   <body>
-    <section class="section_carbon_app_navbar">
+    <div class="header">
       <div class="container">
-        <div class="carbon_app_navbar">
-          <h1 class="logo">
-            <span class="text-logo"
-              ><i class="fa-solid fa-leaf"></i> Carbon</span
-            >
-            App
-          </h1>
-          <nav>
-            <ul>
-              <li>
-                <a href="{{url_for('users.register')}}">Register</a>
-              </li>
-              <li>
-                <a href="{{url_for('users.login')}}">Login</a>
-              </li>
-              <li>
-                <a href="{{url_for('home.home_home')}}">Home</a>
-              </li>
-              <li>
-                <a href="{{url_for('methodology.methodology_home')}}"
-                  >Methology</a
-                >
-              </li>
-              <li>
-                <a href="{{url_for('carbon_app.carbon_app_home')}}"
-                  >Carbon App</a
-                >
-              </li>
-            </ul>
-          </nav>
+        <div class="logo">
+          <img
+            src="{{ url_for('static', filename='assets/carbon_logo.svg') }}"
+            alt="carbno app logo"
+          />
+
+          <span class="text-logo"> Carbon App</span>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="{{url_for('home.home_home')}}">Home</a>
+            </li>
+            <li>
+              <a href="{{url_for('methodology.methodology_home')}}"
+                >Methology</a
+              >
+            </li>
+            <li>
+              <a href="{{url_for('carbon_app.carbon_app_home')}}">Carbon App</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="account-container">
+          <li>
+            <a href="{{url_for('users.register')}}">Register</a>
+          </li>
+          <li class="login">
+            <a href="{{url_for('users.login')}}">Login</a>
+          </li>
         </div>
       </div>
-    </section>
+    </div>
 
     {% block content %} {% endblock %}
 

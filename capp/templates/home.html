@@ -1,9 +1,35 @@
 {% extends "layout.html" %} {% block content %}
 
 <!-- Header -->
-<section class="section_header_home">
+<section class="hero-section" id="home">
   <div class="container">
-    <h1>Homepage</h1>
+    <div class="content-container">
+      <div class="col-l">
+        <h1 class="hero-title">
+          <span>Together</span>, companies can halt climate change
+        </h1>
+        <p>
+          We help people to consider concretly the impact on the climate of the
+          means of transport they choose.
+        </p>
+
+        <div class="btn-container">
+          <a class="stripe-btn">Explore</a>
+          <a class="full-btn">Carbon App</a>
+        </div>
+      </div>
+
+      <div class="col-r">
+        <img
+          src="{{ url_for('static', filename='assets/nature01.jpg') }}"
+          alt="nature image"
+        />
+        <img
+          src="{{ url_for('static', filename='assets/nature02.jpg') }}"
+          alt="nature image"
+        />
+      </div>
+    </div>
   </div>
 </section>
 
