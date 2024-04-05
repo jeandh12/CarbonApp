@@ -1,8 +1,21 @@
 {% extends "layout.html" %} {% block content %}
-
 <!-- Header -->
-<section class="hero-section">
-  <div class="container"><h1>Methodology page</h1></div>
+<section id="methodology">
+  <div class="container" data-aos="fade-up" data-aos-duration="1000">
+    <div class="text-container">
+      <span class="subtitle">Methodology</span>
+      <h1>Understanding carbon footprints</h1>
+      <p>
+        Delve into the intricacies of carbon footprint calculation with our
+        methodology tailored for organizations. Our carbon footprint calculator
+        meticulously maps the transport emissions of employees, offering
+        valuable insights into the environmental impact of daily commutes.
+        <br /><br />Through comprehensive analysis and innovative solutions, we
+        empower organizations to reduce their carbon footprint and embrace
+        sustainable transport options, driving positive change for a greener
+        future
+      </p>
+    </div>
+  </div>
 </section>
-
-{% endblock content %}
+{% include "cta_layout.html" %} {% endblock %}

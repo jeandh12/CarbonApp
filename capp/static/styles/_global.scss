@@ -16,23 +16,27 @@ html {
   max-width: 1500px;
   width: 100%;
   margin: 0 auto;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .hero {
   padding-top: 100px;
   min-height: 100vh;
+  height: 100vh;
+}
+
+.flex-container {
+  display: flex;
 }
 
 .subtitle {
   font-family: "Gabarito";
   font-weight: 400;
-  background-color: #f9fee2;
+  background-color: #9fd897;
   padding: 5px 10px;
   border-radius: 50px;
   font-size: 14px;
-  border: 1px solid rgba(0, 0, 0, 0.068);
   margin-bottom: 15px;
   display: block;
   width: fit-content;
@@ -41,19 +45,92 @@ html {
 /* FOOTER */
 
 #sub-footer {
-  background-color: rgb(27, 27, 27);
+  background-color: rgb(255, 255, 255);
 }
 
 #sub-footer .container {
   padding-top: 25px;
   padding-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  img {
+    height: 20px;
+  }
 }
 
-#sub-footer p {
-  color: white;
+#sub-footer span {
+  color: rgb(32, 32, 32);
   font-size: 12px;
 }
 
+#footer {
+  background-color: #86d07c;
+
+  .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 100px;
+  }
+
+  .col-links {
+    span {
+      font-size: 16px;
+    }
+
+    ul {
+      list-style-type: none;
+      margin-top: 10px;
+
+      li a {
+        font-size: 13px;
+        font-family: "Lato";
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  img {
+    filter: brightness(0%);
+    height: 50px;
+  }
+
+  .col-text {
+    max-width: 275px;
+
+    a {
+      background-color: black;
+      padding: 10px 20px;
+      border-radius: 50px;
+      color: white;
+      display: block;
+      margin-top: 20px;
+      width: fit-content;
+    }
+  }
+
+  .col {
+    p {
+      font-size: 13px;
+      margin-top: 10px;
+      line-height: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    a {
+      font-size: 13px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
 /* CURSOR */
 
 .cursor {
@@ -65,7 +142,7 @@ html {
   left: 0;
 
   border-radius: 50%;
-  background: #d9e99a;
+  background: #9bd696;
   pointer-events: none;
   z-index: 111;
   mix-blend-mode: difference;

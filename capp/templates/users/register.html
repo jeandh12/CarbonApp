@@ -1,9 +1,45 @@
 {% extends "layout.html" %} {% block content %}
 
 <!-- Header -->
-<section class="hero-section">
+<section
+  class="hero-section"
+  id="register"
+  data-aos="fade-up"
+  data-aos-duration="1000"
+>
+  <img
+    class="bg-img"
+    src="{{ url_for('static', filename='assets/env-img.jpg') }}"
+    alt="nature image"
+    data-aos="fade-left"
+    data-aos-duration="1000"
+  />
   <div class="container">
-    <h1>Please, register here!</h1>
+    <form method="post">
+      <div class="subtitle">Register</div>
+
+      <span>Start your <strong>Green</strong> journey !</span>
+      <div class="label-container">
+        <div class="label">
+          <label for="first_name">First Name</label>
+          <input type="text" name="first_name" required />
+        </div>
+        <div class="label">
+          <label for="last_name">Last Name</label
+          ><input type="text" name="last_name" required />
+        </div>
+      </div>
+      <div class="label">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" required />
+      </div>
+      <div class="label">
+        <label for="password">Password</label>
+        <input type="password" name="password" required />
+      </div>
+      <input type="submit" value="Register" />
+      <p>Already register ? <a href="{{url_for('users.login')}}">Login</a></p>
+    </form>
   </div>
 </section>
 

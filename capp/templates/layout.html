@@ -27,6 +27,9 @@
       type="image/x-icon"
     />
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- To activate media queries in devices -->
     <meta
       name="viewport"
@@ -40,28 +43,36 @@
     {% endif %}
   </head>
   <body>
-    <div class="header">
+    <div class="header" id="menu-container">
       <div class="container">
-        <div class="logo">
+        <a class="logo" href="{{url_for('home.home_home')}}">
           <img
             src="{{ url_for('static', filename='assets/carbon_logo.svg') }}"
             alt="carbno app logo"
           />
 
           <span class="text-logo"> Carbon App</span>
-        </div>
+        </a>
         <nav>
           <ul>
             <li>
-              <a href="{{url_for('home.home_home')}}">Home</a>
-            </li>
-            <li>
-              <a href="{{url_for('methodology.methodology_home')}}"
-                >Methology</a
+              <a href="{{url_for('home.home_home')}}" data-page="page-home"
+                >Home</a
               >
             </li>
             <li>
-              <a href="{{url_for('carbon_app.carbon_app_home')}}">Carbon App</a>
+              <a
+                href="{{url_for('methodology.methodology_home')}}"
+                data-page="page-methodology"
+                >Methodology</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{url_for('carbon_app.carbon_app_home')}}"
+                data-page="page-carbon-app"
+                >Carbon App</a
+              >
             </li>
           </ul>
         </nav>
@@ -77,10 +88,79 @@
       </div>
     </div>
 
+    <div class="cursor"></div>
+
     {% block content %} {% endblock %}
 
-    <section class="section_footer">
-      <div class="container"></div>
+    <section id="footer">
+      <div class="container">
+        <div class="col">
+          <a class="logo" href="{{url_for('home.home_home')}}">
+            <img
+              src="{{ url_for('static', filename='assets/carbon_logo.svg') }}"
+              alt="carbno app logo"
+            />
+
+            <span class="text-logo"> Carbon App</span>
+          </a>
+        </div>
+
+        <div class="col col-links">
+          <span>Explore</span>
+          <ul>
+            <li>
+              <a href="{{url_for('home.home_home')}}">Home</a>
+            </li>
+            <li>
+              <a href="{{url_for('methodology.methodology_home')}}"
+                >Methology</a
+              >
+            </li>
+            <li>
+              <a href="{{url_for('carbon_app.carbon_app_home')}}">Carbon App</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col col-links">
+          <span>Quick access</span>
+          <ul>
+            <li>
+              <a href="{{url_for('users.register')}}">Register</a>
+            </li>
+            <li>
+              <a href="{{url_for('users.login')}}">Login</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col col-text">
+          <span>Join the movement</span>
+          <p>
+            We provide practical tools for individuals to consider the climate
+            impact of their transportation choices.
+          </p>
+          <a href="{{url_for('carbon_app.carbon_app_home')}}"
+            >Try the Carbon App</a
+          >
+        </div>
+      </div>
     </section>
+    <section id="sub-footer">
+      <div class="container">
+        <span
+          >2023 - 2024 | Carbon App is a project carried out as part of
+          HVL©</span
+        >
+        <img
+          src="{{ url_for('static', filename='assets/hvl_logo.png') }}"
+          alt="carbno app logo"
+        />
+      </div>
+    </section>
+    <script src="{{ url_for('static', filename='JS/main.js') }}"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

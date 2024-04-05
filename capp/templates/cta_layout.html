@@ -1,0 +1,60 @@
+<section id="cta">
+  <div class="container">
+    <div class="CTA" data-aos="fade-up" data-aos-duration="1500">
+      <div class="col-l">
+        <h3>Join the many who've taken the plunge. Why not you?</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
+          quibusdam eveniet? Omnis ea quasi at dolorum cum? Perspiciatis, qui
+          dolorem.
+        </p>
+
+        <div class="testimonial">
+          <div class="icon-container">
+            <span>+</span>
+            <img
+              class="member-picture"
+              src="{{ url_for('static', filename='assets/user2.jpg') }}"
+              alt="team member"
+            />
+            <img
+              class="member-picture"
+              src="{{ url_for('static', filename='assets/user3.jpg') }}"
+              alt="team member"
+            />
+            <img
+              class="member-picture"
+              src="{{ url_for('static', filename='assets/user4.jpg') }}"
+              alt="team member"
+            />
+            <img
+              class="member-picture"
+              src="{{ url_for('static', filename='assets/user5.jpg') }}"
+              alt="team member"
+            />
+            <img
+              class="member-picture"
+              src="{{ url_for('static', filename='assets/user6.jpg') }}"
+              alt="team member"
+            />
+            <img
+              class="member-picture"
+              src="{{ url_for('static', filename='assets/user7.jpg') }}"
+              alt="team member"
+            />
+          </div>
+        </div>
+        <a class="full-btn" href="{{url_for('carbon_app.carbon_app_home')}}"
+          >Try the Carbon App</a
+        >
+      </div>
+      <div class="col-r">
+        <img
+          class="carbon-asset image"
+          src="{{ url_for('static', filename='assets/carbon_logo.svg') }}"
+          alt="team member"
+        />
+      </div>
+    </div>
+  </div>
+</section>
