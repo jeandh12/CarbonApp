@@ -30,6 +30,9 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <!--For the plots-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
     <!-- To activate media queries in devices -->
     <meta
       name="viewport"
@@ -78,12 +81,33 @@
         </nav>
 
         <div class="account-container">
+          {% if current_user.is_authenticated %}
+
+          <a
+            class="user-container"
+            href="{{url_for('carbon_app.your_data')}}"
+            data-page="page-carbon-app"
+          >
+            <img
+              src="{{ url_for('static', filename='assets/user_illu.png') }}"
+              alt="user icon"
+            />
+            <span>{{ current_user.username }}</span>
+          </a>
+          <a href="{{ url_for('users.logout') }}">
+            <img
+              class="logout-icon"
+              src="{{ url_for('static', filename='assets/sign-out-alt (1).svg') }}"
+              alt="logout icon"
+          /></a>
+          {% else %}
           <li>
             <a href="{{url_for('users.register')}}">Register</a>
           </li>
           <li class="login">
             <a href="{{url_for('users.login')}}">Login</a>
           </li>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -162,5 +186,17 @@
     <script>
       AOS.init();
     </script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

@@ -92,4 +92,22 @@
       }
     }
   }
+
+  .invalid-feedback span {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color: rgb(235, 94, 94);
+  }
+
+  .form-check {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: -20px;
+
+    .form-check-input {
+      width: fit-content;
+    }
+  }
 }

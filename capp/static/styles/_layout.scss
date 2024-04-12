@@ -101,3 +101,44 @@ a {
 .contact a:hover {
   background-color: #d4a373;
 }
+
+.account-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .logout-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    margin-top: 5px;
+    transition: 0.3s ease;
+
+    &:hover {
+      transform: translateX(5px);
+    }
+  }
+
+  .user-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #86d07d;
+    padding: 5px;
+    border-radius: 50px;
+    padding-right: 25px;
+
+    span {
+      font-size: 14px;
+      text-transform: capitalize;
+    }
+    img {
+      background-color: rgb(255, 255, 255);
+      border-radius: 100%;
+      padding: 2px;
+      width: 26px;
+      height: 26px;
+      margin-top: -0.45px;
+      object-fit: contain;
+    }
+  }
+}
