@@ -12,15 +12,6 @@ DBVAR = 'postgresql://username:password@endpoint:5432//ebdb'
 application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR 
 application.config['SQLALCHEMY_BINDS'] ={'transport': DBVAR}
 
-#DBVAR = 'postgresql://postgres:cappenv2024@awseb-e-ajmp32cb7x-stack-awsebrdsdatabase-ug8wwniyuqzl.c9o6euammsl3.eu-north-1.rds.amazonaws.com:5432/ebdb'
-#application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR 
-#application.config['SQLALCHEMY_BINDS'] = {'transport': DBVAR}
-
-# application.config['SECRET_KEY'] = os.environ['SECRET_KEY']  
-#application.config['SECRET_KEY'] = '3oueqkfdfas8ruewqndr8ewrewrouewrere44554'
-#application.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///user.db'
-#application.config['SQLALCHEMY_BINDS'] ={'transport': 'sqlite:///transport.db'}
-
 
 db = SQLAlchemy(application)
 bcrypt = Bcrypt(application)
