@@ -6,6 +6,7 @@ import os
 
 application = Flask(__name__)
 
+
 DBVAR = 'postgresql://postgres:cappenv2024@awseb-e-ajmp32cb7x-stack-awsebrdsdatabase-ug8wwniyuqzl.c9o6euammsl3.eu-north-1.rds.amazonaws.com:5432/ebdb'
 application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR 
 application.config['SQLALCHEMY_BINDS'] = {'transport': DBVAR}
