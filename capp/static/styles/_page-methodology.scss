@@ -28,3 +28,51 @@
     }
   }
 }
+
+#methodoly-table {
+  ol:nth-child(even) {
+    background-color: red;
+  }
+
+  .main-container {
+    padding: 50px 0;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .modern-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  .modern-table th,
+  .modern-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .modern-table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .modern-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .modern-table tbody tr:hover {
+    background-color: #ddd;
+  }
+
+  .modern-table tbody td:first-child {
+    text-align: left;
+  }
+
+  .modern-table tbody td {
+    font-weight: bold;
+  }
+}
