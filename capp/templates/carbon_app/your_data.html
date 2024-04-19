@@ -7,7 +7,6 @@
   <div class="container flex-container">
     <div class="body-container">
         <h1>Data dashboard</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum maiores eius assumenda!</p>
       <div class="box-container">
         <div class="box">
             <canvas id="emissions_by_transport"></canvas>
@@ -99,8 +98,6 @@
                   <th align="left" scope="col">Transport</th>
                   <th align="left" scope="col">Fuel</th>
                   <th align="left" scope="col">Co2</th>
-                  <th align="left" scope="col">Ch4</th>
-                  <th align="left" scope="col">Total</th>
                   <th align="left" scope="col">Delete</th>
                 </tr>
               </thead>
@@ -113,8 +110,6 @@
                   <td>{{ entry.transport }}</td>
                   <td>{{ entry.fuel }}</td>
                   <td>{{ entry.co2 }}</td>
-                  <td>{{ entry.ch4 }}</td>
-                  <td>{{ entry.total }}</td>
                   <td>
                     <a
                       href="{{ url_for('carbon_app.delete_emission', entry_id = entry.id) }}"
@@ -146,7 +141,7 @@
   let emissions_by_transport_chart = new Chart(emissions_by_transport, {
           type: 'pie',
           data: {
-          labels: ['Bicycle', 'Bus', 'Car', 'Ferry', 'Motorbike', 'Plane', 'Scooter', 'Walk'],
+          labels: ['Bicycle', 'Bus', 'Car', 'Ferry', 'Motorbike', 'Plane', 'Scooter', 'Walk', 'Train'],
               datasets: [{
                   data: emission_transport_data,
                   backgroundColor: ['#9ac2be', '#f2e3b6', '#f2c299',
@@ -211,7 +206,7 @@
   let kms_by_transport_chart = new Chart(kms_by_transport, {
           type: 'pie',
           data: {
-          labels: ['Bicycle', 'Bus', 'Car', 'Ferry', 'Motorbike', 'Plane', 'Scooter', 'Walk'],
+          labels: ['Bicycle', 'Bus', 'Car', 'Ferry', 'Motorbike', 'Plane', 'Scooter', 'Walk', 'Train'],
               datasets: [{
                   label: "Income Vs Expenses",
                   data: kms_transport_data,

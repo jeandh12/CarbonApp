@@ -68,6 +68,19 @@
         </div>
         <div class="box">
           <img
+            src="{{ url_for('static', filename='assets/subway.svg') }}"
+            alt="plane icon"
+          />
+          <h3>Train</h3>
+          <div class="section_container_buttons_carbon_app_new_entry_main">
+            <a
+              class="btn_carbon_app_new_entry_main"
+              href="{{url_for('carbon_app.new_entry_train')}}"
+            ></a>
+          </div>
+        </div>
+        <div class="box">
+          <img
             src="{{ url_for('static', filename='assets/plane-alt.svg') }}"
             alt="plane icon"
           />
